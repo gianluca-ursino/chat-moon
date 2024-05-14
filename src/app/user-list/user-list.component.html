@@ -1,0 +1,5 @@
+<ul class="list-group rounded-0 border-0">
+    <li class="list-group-item border-bottom" *ngFor="let user of users" (click)="openChat(user.email)">{{ user.name }}</li>
+</ul>
+
+

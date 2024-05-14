@@ -1,0 +1,7 @@
+<input
+  class='form-control rounded-0'
+  [(ngModel)]='message'
+  (keydown)='handleSubmit($event)'
+/>
+
+<button class='btn w-25 btn-primary rounded-0' (click)='sendMessage(this.loggedUser)'>Invia</button>

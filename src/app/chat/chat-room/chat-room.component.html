@@ -1,0 +1,16 @@
+<div class='main-content'>
+  <div class='user-list-wrapper w-25'>
+    <app-user-list (openChatEmitter)="openChat($event)"></app-user-list>
+  </div>
+  <div class="d-flex w-75 flex-column">
+    <div #scroller class='feed-wrapper'>
+      <app-chat-feed [loggedUser]="currentUser" [chatMessages]="chatMessages | async"></app-chat-feed>
+    </div>
+    <div class='position-absolute w-75 bottom-0 chat-form-wrapper'>
+      <app-chat-form (usersList)="getUsersList($event)" [loggedUser]="emailReceiver"></app-chat-form>
+    </div>
+  </div>
+  
+</div>
+
+

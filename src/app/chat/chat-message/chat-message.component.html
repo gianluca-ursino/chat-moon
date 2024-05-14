@@ -1,0 +1,24 @@
+<!-- <div class="message-container" [ngClass]="{'is-own-message-container' : isOwnMessage}">
+  <div class="message-data" [ngClass]="{'is-own-message-data' : isOwnMessage}">
+    <span class="sender" [ngClass]="{'is-own-sender' : isOwnMessage}">
+      {{ chatMessage.username }}
+    </span>
+
+    <span class="timestamp" [ngClass]="{'is-own-timestamp' : isOwnMessage}">
+      {{ chatMessage.timestamp | date: 'dd/MM/yyyy HH:mm:ss'}}
+    </span>
+  </div>
+
+  <div class='message-content' [ngClass]="{'is-own-message-content' : isOwnMessage}">
+    {{ chatMessage.message }}
+  </div>
+</div> -->
+
+<div class="d-flex message-container text-black p-3 flex-column" [ngClass]="{'is-own-message-container' : isOwnMessage}">
+  <div class="d-flex userAndDate font-weight-bold"[ngClass]="{'is-own-userAndDate' : isOwnMessage}">
+    {{ chatMessage.username }} - {{ chatMessage.timestamp | date: 'dd/MM/yyyy HH:mm:ss'}}  
+  </div>
+  <div id="userMessage">
+    {{ chatMessage.message }}
+  </div>
+</div>
